@@ -3,7 +3,7 @@ class Book
   attr_reader :title, :genre
 
   GENRES = []
-  GENRES = GENRES.uniq
+
 
   def initialize(title)
     @title = title
@@ -11,7 +11,9 @@ class Book
 
   def genre=(genre)
     @genre = genre
-    GENRES.push(genre)
+    if GENRES.include?(@genre) == false
+      GENRES.push(genre)
+    end  
   end
 
   def turn_page
