@@ -11,7 +11,8 @@ class Book
 
   def genre=(genre)
     @genre = genre
-    if GENRES.include?(@genre) == false
+    if GENRES.include?(@genre) == "false"
+      binding.pry
       GENRES.push(@genre)
     end
   end
