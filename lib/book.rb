@@ -13,7 +13,7 @@ class Book
     @genre = genre
     if GENRES.include?(@genre) == false
       GENRES.push(genre)
-    end  
+    end
   end
 
   def turn_page
